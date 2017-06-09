@@ -33,4 +33,12 @@ class Customer
     SqlRunner.run(sql)
   end
 
+  def films()
+    sql = "SELECT films.* FROM films
+      INNER JOIN tickets
+      ON tickets.film_id = films.id
+      WHERE tickets.customer_id = #{@id}"
+    SqlRunner.run(sql)
+  end
+
 end
