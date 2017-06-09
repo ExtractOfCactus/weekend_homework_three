@@ -2,9 +2,9 @@ require('pg')
 
 class SqlRunner
 
-  def run(sql)
+  def SqlRunner.run(sql)
     begin
-      db = ({dbname: "codeclan_cinema", host: "localhost"})
+      db = PG.connect({dbname: "codeclan_cinema", host: "localhost"})
       result = db.exec(sql)
     ensure
       db.close
