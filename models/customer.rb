@@ -42,4 +42,13 @@ class Customer
     return film_hashes.map {|film_hash| Film.new(film_hash)}
   end
 
+  def payment()
+    films().each {|film| @funds -= film.price()}
+    update()
+    return @funds
+  end
+
+  def number_of_tickets()
+  end
+
 end
