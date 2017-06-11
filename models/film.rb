@@ -43,4 +43,8 @@ class Film
     return result
   end
 
+  def number_of_customers()
+    customers().length()
+  end
+
 end

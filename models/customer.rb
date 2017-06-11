@@ -49,6 +49,7 @@ class Customer
   end
 
   def number_of_tickets()
+    films().length()
   end
 
 end
